@@ -20,6 +20,10 @@ if ((prenomBDD === prenomPrompt) && (ageBDD === agePrompt)){
 */
 // l'opérateur || et OR permet de rentrer dans la condition si au moins une des deux est vraie.
 
+if ((prenomBDD === prenomPrompt) || (ageBDD === agePrompt)){
+    // code si une des 2 conditions sont validées
+}
+
 => si A est FAUX et B est VRAI => VRAI
 => si A est VRAI et B est FAUX => VRAI
 => si A est FAUX et B est FAUX => FAUX
@@ -30,6 +34,7 @@ if ((prenomBDD === prenomPrompt) && (ageBDD === agePrompt)){
 */
 
 var utilisateurLog = true; // utilisateur connecté : oui
+
 if(!utilisateurLog){
     // code si l'utilisateur n'est pas connecté
 }
