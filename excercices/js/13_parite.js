@@ -20,7 +20,7 @@
 /* Modifiez le programme parite.js pour qu'il affiche aussi les nombres impairs. */
 
 
-for (var i = 1; i <= 10; i++) {
+/* for (var i = 1; i <= 10; i++) {
     if (i % 2 === 0) {
     document.write("<p>" + i + " est pair </p>");
     }
@@ -35,7 +35,7 @@ document.write("<hr>");
 /*  améliorez le programme pour que le nombre initial soit saisi par l'utilisateur. */
 
 
- var pair = parseInt(prompt("saisir un nombre"));
+ /*  var pair = parseInt(prompt("saisir un nombre"));
 if ( (pair === 2) || (pair === 4) || (pair === 6) || (pair === 8) || (pair === 10) ) {
     document.write("<p>" + pair + " est pair </p>");
     }
@@ -59,25 +59,25 @@ document.write("<hr>");
 
 
 /*  CORRECTION */
-var chiffre = parseInt(prompt("saisir un nombre entier"));
-var chiffreMax = (chiffre + 10);
+/*  var chiffre = parseInt(prompt("saisir un nombre entier"));
+var chiffreMax = (chiffre + 10); ici on part de 10 pr ex
 
 while(chiffre <= chiffreMax) {
      if(chiffre % 2 === 0){
-         document.write("<p>" + i + " est pair </p>")
+         document.write("<p>" + chiffre + " est pair </p>")
      }else{
-        document.write("<p>" + i + " est pair </p>")
+        document.write("<p>" + chiffre + " est impair </p>")
      }
      chiffre++;
-} 
+} */
 
 var nbUser = parseInt(prompt("saisir un nombre entier"));
-var nbUserMax = (nbUser + 5);
+var nbUserMax = (nbUser + 5); // on part ici de 5
 
 for (var tour = nbUser; tour <= nbUserMax; tour++) {
     if (tour % 2 === 0){
         document.write("<p>" + tour + " est pair </p>");
     }else if (tour % 2 != 0){
-       document.write("<p>" + tour + " est pair </p>");
-    }
+       document.write("<p>" + tour + " est impair </p>");
+    } 
 }
