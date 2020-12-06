@@ -51,16 +51,16 @@ if ( (heure >= 0) && (heure <= 23) && (minutes >= 0) && (minutes <= 59) && (seco
     if (secondes === 60){
         secondes = 0
         minutes++;
-         if(minutes === 60){
+         if (minutes === 60){
          minutes = 0;
          heure++;
-           if(heure === 24){
+           if (heure === 24){
                heure = 0;
            }
          }
     }
-    document.write(" <p> Dans une seconde il sera " + heure + "h"+ minutes + "min"+ secondes + "sec. </p>");
-}else{
+    document.write("<p> Dans une seconde il sera " + heure + "h"+ minutes + "min"+ secondes + "sec. </p>");
+} else {
     document.write('Heure incorrecte !')
 }
      

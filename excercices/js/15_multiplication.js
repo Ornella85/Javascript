@@ -74,7 +74,7 @@ while( choix < 2 || choix > 10){  // tandis que
 
 
 // CORRECTION SONIA
-var choix = prompt('entrez un nombre à multiplier par 10 ... entre 2 et 9');
+var choix = prompt('Entrez un nombre entre 2 et 9');
 
 while ((choix >1)|| (choix < 10)) {
     if ((choix >= 2) && (choix <= 9)) {
