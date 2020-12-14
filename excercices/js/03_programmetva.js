@@ -15,3 +15,13 @@ ttc = horsTaxe * 1.2;
 
 document.write('<h2>Le prix ttc de ' + horsTaxe + ' est de : ' + ttc + '€ </h2>');
 
+
+
+
+
+// var hs = parseInt(prompt('saisissez votre prix hs'));
+
+// var ttc = hs  * 1.196;
+
+// alert(hs + 'en tcc est égal à ' + ttc );
+

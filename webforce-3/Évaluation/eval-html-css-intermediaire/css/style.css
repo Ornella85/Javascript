@@ -1,0 +1,211 @@
+/*  ********************* HEADER ********************* */
+header{
+    width: 100%;
+    height: 200px;
+    background-color: #cab990;
+}
+
+header img{
+    float: left;
+}
+
+header img:first-child{
+    margin: 20px;
+    padding: 50px;
+    transform: translate(30%);
+}
+
+header p:first-of-type{
+    position: relative;
+    left: -250px;
+    top: 150px;
+    font-size: 20px;
+}
+
+header span{
+    color: #d29310;
+}
+
+header img:nth-of-type(2), header img:nth-of-type(3){
+    float: right;
+    background-color: gray;
+    border: 2px solid gray;
+    margin-right: 300px;
+}
+
+header p:nth-of-type(2){
+    position: relative;
+    left: 920px;
+    top: 80px;
+    font-size: 20px;
+}
+
+
+/*  ********************* NAV ********************* */
+nav{
+    background-color: #cab990; 
+    padding: 8px;
+    float: right;
+    position: relative;
+    left: 270px;
+    top: 80px;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    background-color: #cab990; 
+    padding: 0.5rem 1.9rem;
+    border-right: 1px solid #383836;
+    font-size: 15px;
+    position: relative;
+}
+
+.clear{
+    clear: both;
+}
+
+
+/*  ********************* MAIN ********************* */
+
+/*  ***************** Section ****************** */
+
+section{
+    display: flex;
+    transform: translate(30%); 
+}
+ section figure:nth-of-type(3){
+     flex-wrap: wrap;
+ }
+
+ .bandeaugris{
+     background: #4c4c4c;
+     height: 20px;
+ }
+
+/*  ***************** Figure + FigCaption ****************** */
+figcaption{
+    font-size: 15px;
+    text-align: center;
+}
+
+figure p, figure span{
+    text-align: right;
+    font-size: 20px;
+   
+}
+
+figure p{
+    text-decoration: line-through;
+}
+
+figure span{
+    color: #d29310;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.carrejaune1{
+    position: absolute;
+    top: 90px;
+    left: 350px;
+    background-color:#d29310;
+    width: 80px;
+    height: 40px;
+}
+
+.carrejaune2{
+    position: absolute;
+    top: 90px;
+    left: 750px;
+    background-color:#d29310;
+    width: 80px;
+    height: 40px;
+}
+
+.carrejaune3{
+    position: absolute;
+    bottom: 400px;
+    left: 350px;
+    background-color:#d29310;
+    width: 80px;
+    height: 40px;
+}
+
+.carrejaune4{
+    position: absolute;
+    bottom: 400px;
+    left: 750px;
+    background-color:#d29310;
+    width: 80px;
+    height: 40px;
+}
+
+/*  ***************** UL LI ****************** */
+
+.contact ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transform: translate(30%);
+    border: 1px solid #eaeaea;
+    background-color: #eaeaea;
+    height: 50px;
+    line-height: 50px;
+}
+.contact a{
+    text-decoration: none;
+    margin: 30px;
+    color: black;
+    
+}
+::marker{
+   color: #d29310;
+}
+
+.contact li:first-child{
+    list-style: none;
+}
+
+
+
+/*  ********************* FOOTER ********************* */
+footer{
+   background-color: #4c4c4c;
+}
+.livraison{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 50%;
+    color: grey;
+    transform: translate(50%);
+    text-align: center;
+}
+
+hr{
+    width: 30%;
+    margin: 0 auto;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    margin: 10px
+}
+
+footer li{
+    list-style: none;
+    margin: 30px;
+    font-size: 50px;
+}
+
+footer i{
+    color: white;
+}
+
+small{
+    display: flex;
+    justify-content: center;
+    color: white;
+}

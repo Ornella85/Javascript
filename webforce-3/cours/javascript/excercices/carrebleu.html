@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carré Bleu</title>
+</head>
+<body>
+    
+    <style>
+        div
+        {
+         width: 300px; 
+         height: 200px; 
+         border: 3px solid; 
+         margin-bottom : 30px;
+         margin-top: 30px;
+         position: relative;
+         }
+    </style>
+    <div id ="maDiv"></div>
+
+    <script>
+        document.getElementById('maDiv').onmouseover = function(){
+            this.style.backgroundColor = '#ffa233';
+        };
+        document.getElementById('maDiv').onmouseout = function(){
+            this.style.backgroundColor = '#336699';
+        };
+    </script>
+
+</body>
+</html>
