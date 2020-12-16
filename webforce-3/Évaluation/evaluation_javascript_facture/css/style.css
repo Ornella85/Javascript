@@ -1,0 +1,123 @@
+/*  BODY ADAPTE A L'IMPRESSION */
+@media print {
+    body{
+        width: 21cm;
+        height: 29.7cm;
+        margin: 30mm 45mm 30mm 45mm; 
+   } 
+}
+
+/*  BODY ADAPTE A L'IMPRESSION */
+body{
+    margin: 0 auto;
+    width: 60%;
+    height: 1200px;
+}
+
+/*  LE TITRE DU HEADER   */
+header h1{
+    font-size: 45px;
+    text-align: center;
+}
+
+
+/*  LES INPUTS DANS LE HEADER   */
+.formulaire input{
+    width: 220px;
+    margin: 3px;
+}
+
+/*  LA CLASS FACTURE */
+.facture{
+    float: right;
+}
+
+.facture label{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.clear{
+    clear: both;
+}
+
+/*  LA CLASS nFACTURE pour de numéro de facture */
+.nFacture label{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nFacture input{
+    width: 30px;
+}
+
+/*                  SECTION COORDONNEES              */
+.destinataire, .expedier{
+    display: inline-block;
+}
+
+.expedier{
+    margin-left: 660px;
+}
+
+.destinataire p, .expedier p{
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.destinataire input, .expedier input{
+    width: 220px;
+    background-color: rgb(212, 205, 201);
+}
+
+#client{
+    width: 226px;
+}
+
+
+/*        TABLEAU DÉTAILS DES PRODUITS       */
+
+h2{
+    text-align: center;
+    font-size: 35px;
+    margin-top: 70px;
+}
+
+.produits{
+    margin: 20px;
+}
+table, td, th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: 40px;
+    padding: 0;
+}
+
+table{
+    width: 90%;
+    height: 150px;
+    
+}
+
+
+/*       INTERIEUR TABLEAU DÉTAILS DES PRODUITS       */
+#codeProduit{
+    width: 170px;
+    transform: translate(20%);
+}
+
+#quantite{
+    width: 170px;
+    transform: translate(20%);
+}
+
+
+
+/*        TABLEAU MONTANT      */
+
+.calcul{
+    width: 184px;
+}
+

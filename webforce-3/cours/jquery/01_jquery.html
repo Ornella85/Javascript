@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+
+    <style> /* Nouvelle class */
+        .newClass{
+            color : red;
+            background: black;
+        }
+    </style>
+</head>
+
+    <body>
+        <h1>Mon titre</h1>
+        <div class="avion">AirBus1</div>
+        <div class="avion">AirBus2</div>
+        <div class="avion">AirBus3</div>
+
+        <div class="voiture">voiture1</div>
+        <div class="voiture">voiture2</div>
+        <div class="voiture">voiture3</div>
+
+        <p>paragraphe1</p>
+        <p>paragraphe2</p>
+        <p>paragraphe3</p>
+        <p>paragraphe4</p>
+        <p>paragraphe5</p>
+
+        <section id="maSection">Section</section>
+
+        <span>span</span>
+
+        <ul>
+            <li>
+                <a href="https://google.com">Google</a>
+            </li>
+        </ul>
+
+          
+        <!-- <script>
+            alert('Hello !');
+        </script> -->
+        
+        <!-- LIEN DE LA LIBRAIRIE toujours en bas de la page -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            jQuery(document).ready(function($){
+                //ici j'intégrerai mon code JQuery
+                //document.getElementsByClassName('avion')
+                //document.querySelectorAll('avion')
+                // $('.avion');
+                var allAvion = $('avion'); //sélectionne tous les éléments ayant la classe "avion"
+                var firstPlane = $ ('.avion:first'); // sélectionner le 1er avion
+                var lastPlane = $('.avion:last'); // sélectionner le dernier avion
+                var xPlane = $('.avion:eq(1)'); // sélectionner l'avion que l'on veut
+
+                //$('element_cible').evenement(function(){});
+                // firstPlane.click(function(){
+                //     alert('first plane');
+                // });
+
+                // Les méthodes jQuery
+                // firstPlane.click(function(){
+                //     firstPlane.css('background': 'red');
+                // });
+
+                firstPlane.click(function(){
+                        firstPlane.css({
+                            'background': 'red',
+                            'color' : "#fff",
+                            'text-decoration' : 'underLine',
+                            'font-weight' : 'bold',
+                        });
+                        firstPlane.text('Un nouveau texte');
+                        $('span').addClass('newClass'); // cet ex montre qu'on peut ajouter du contenu à mon html
+                        $('span').
+
+                        // $('h1').hide(); //cacher un élement
+                        $('h1').fadeOut();  // faire disparaitre un élément 0..5s après
+                    }); 
+
+
+                    $('a').click(function(event){
+                        event.preventDefault();   // Stoppe le comportement du lien par défault
+                        alert('Haha ! Tu ne peux pas aller sur google !');
+                    });
+
+                });
+        </script>
+
+    </body>
+</html>

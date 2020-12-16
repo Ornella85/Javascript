@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Facture</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>FACTURE</h1>
+
+        <div class="formulaire">
+            <div><input type="text" id="societe" name="societe" placeholder="Nom de la société émettrice" required></div>
+            <div><input type="text" id="adresse" name="adresse" placeholder="Adresse de la société" required></div>
+            <div><input type="text" id="telephone" name="telephone" placeholder="Entrez un numéro de téléphone valide" required></div>
+            <div><input type="email" name="email" placeholder="Adresse de messagerie"></div> 
+        </div>
+
+
+        <div class="facture">
+            <div class = "nFacture">
+                <label>
+                    N° de facture :
+                    <input type="text" id="numFacture" name="numFacture" placeholder="01" required> 
+                </label>
+            </div>
+
+            <label>
+                Date :
+                <select name="jour" id="jour">
+                    <option value="date1">
+                        1
+                    </option>
+                    <option value="date2">
+                        2
+                    </option>
+                    <option value="date3">
+                        3
+                    </option>
+                    <option value="date4">
+                        4
+                    </option>
+                    <option value="date5">
+                        5
+                    </option>
+                    <option value="date6">
+                        6
+                    </option>
+                    <option value="date7">
+                        7
+                    </option>
+                    <option value="date8">
+                        8
+                    </option>
+                    <option value="date9">
+                        9
+                    </option>
+                    <option value="date10">
+                        10
+                    </option>
+                    <option value="date11">
+                        11
+                    </option>
+                    <option value="date12">
+                        12
+                    </option>
+                    <option value="date13">
+                        13
+                    </option>
+                    <option value="date14">
+                        14
+                    </option>
+                    <option value="date15">
+                        15
+                    </option>
+                    <option value="date16">
+                        16
+                    </option>
+                    <option value="date17">
+                        17
+                    </option>
+                    <option value="date18">
+                        18
+                    </option>
+                    <option value="date19">
+                        19
+                    </option>
+                    <option value="date20">
+                        20
+                    </option>
+                    <option value="date21">
+                        21
+                    </option>
+                    <option value="date22">
+                        22
+                    </option>
+                    <option value="date23">
+                        23
+                    </option>
+                    <option value="date24">
+                        24
+                    </option>
+                    <option value="date25">
+                        25
+                    </option>
+                    <option value="date26">
+                        26
+                    </option>
+                    <option value="date27">
+                        27
+                    </option>
+                    <option value="date28">
+                        28
+                    </option>
+                    <option value="date29">
+                        29
+                    </option>
+                    <option value="date30">
+                        30
+                    </option>
+                    <option value="date31">
+                        31
+                    </option>
+                </select>
+
+                <select name="mois" id="mois">
+                    <option value="mois1">
+                        1
+                    </option>
+                    <option value="mois2">
+                        2
+                    </option>
+                    <option value="mois3">
+                        3
+                    </option>
+                    <option value="mois4">
+                        4
+                    </option>
+                    <option value="mois5">
+                        5
+                    </option>
+                    <option value="mois6">
+                        6
+                    </option>
+                    <option value="mois7">
+                        7
+                    </option>
+                    <option value="mois8">
+                        8
+                    </option>
+                    <option value="mois9">
+                        9
+                    </option>
+                    <option value="mois10">
+                        10
+                    </option>
+                    <option value="mois11">
+                        11
+                    </option>
+                    <option value="mois12">
+                        12
+                    </option>
+                </select>
+
+                <select name="annee" id="annee">
+                    <option value="annee1">
+                        2011
+                    </option>
+                    <option value="annee2">
+                        2012
+                    </option>
+                    <option value="annee3">
+                        2013
+                    </option>
+                    <option value="annee4">
+                        2014
+                    </option>
+                    <option value="annee5">
+                        2015
+                    </option>
+                    <option value="annee6">
+                        2016
+                    </option>
+                    <option value="annee7">
+                        2017
+                    </option>
+                    <option value="annee8">
+                        2018
+                    </option>
+                    <option value="annee9">
+                        2019
+                    </option>
+                    <option value="annee10">
+                        2020
+                    </option>
+                </select>
+                <!-- <input type="number" id="start" name="trip-start"
+                placeholder="1"
+                min="1" max="31"> -->
+            </label>
+        </div>
+
+        <div class="clear"></div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <!-- COORDONNEES -->
+        <section class="coordonnees">
+            <div class="destinataire">
+                <p>À :</p>
+
+                <div>
+                    <label>
+                        <select name="client" id="client">
+                            <option value="client">
+                                Nouveau client
+                            </option>
+                            <option value="netscape">
+                                Netscape 2.0
+                            </option>
+                            <option value="youAndI">
+                                You and I production
+                            </option>
+                            <option value="starcraft">
+                                Starcraft Unity
+                            </option>
+                            <option value="godus">
+                                Godus
+                            </option>
+                        </select>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="text" id="nomSociété" name="numFacture" placeholder="Nom de la société" required> 
+                    </label>
+                 </div>
+
+                 <div>
+                    <label>
+                        <input type="text" id="nom" name="numFacture" placeholder="Nom" required> 
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="text" id="rue" name="numFacture" placeholder="Rue" required> 
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="text" id="ville" name="numFacture" placeholder="Code postal, Ville" required> 
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="text" id="numTel" name="numFacture" placeholder="Numéro de téléphone" required> 
+                    </label>
+                </div>
+            </div>
+
+            <div class="expedier">
+                <p>EXPÉDIER À :</p>
+
+                <div>
+                    <label>
+                        <select name="client" id="client">
+                            <option value="client">
+                                Nouveau client
+                            </option>
+                            <option value="netscape">
+                                Cabinet Gérard
+                            </option>
+                            <option value="youAndI">
+                                Putrovski Corporation
+                            </option>
+                            <option value="starcraft">
+                                Chinchan family
+                            </option>
+                            <option value="godus">
+                                La main invisible
+                            </option>
+                        </select>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="text" id="numFacture" name="numFacture" placeholder="Nom de la société" required> 
+                    </label>
+                </div> 
+
+                <div>
+                    <label>
+                        <input type="text" id="numFacture" name="numFacture" placeholder="Nom" required> 
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="text" id="numFacture" name="numFacture" placeholder="Rue" required> 
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="text" id="numFacture" name="numFacture" placeholder="Code postal, Ville" required> 
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="text" id="numFacture" name="numFacture" placeholder="Numéro de téléphone" required> 
+                    </label>
+                </div>
+
+                <div class="clear"></div>
+
+            </div>
+        </section>
+
+
+        <!-- TABLEAU -->
+        <section class="produits">
+            <h2>Détails des produits facturés</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Code produit</th>
+                        <th>Libellé produit</th>
+                        <th>Prix - Unitaire en euros</th>
+                        <th>Quantité commandée</th>
+                        <th>Montant demandé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label>
+                                <select name="codeProduit" id="codeProduit">
+                                    <option value="codeProduit">
+                                        
+                                    </option>
+                                </select>
+                            </label>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <label>
+                                <input type="number" id="quantite" name="quantite" placeholder="0" required> 
+                            </label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <select name="codeProduit" id="codeProduit">
+                                    <option value="codeProduit">
+                                        
+                                    </option>
+                                </select>
+                            </label>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <label>
+                                <input type="number" id="quantite" name="quantite" placeholder="0" required> 
+                            </label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <select name="codeProduit" id="codeProduit">
+                                    <option value="codeProduit">
+                                        
+                                    </option>
+                                </select>
+                            </label>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <label>
+                                <input type="number" id="quantite" name="quantite" placeholder="0" required> 
+                            </label>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <select name="codeProduit" id="codeProduit">
+                                    <option value="codeProduit">
+                                        
+                                    </option>
+                                </select>
+                            </label>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <label>
+                                <input type="number" id="quantite" name="quantite" placeholder="0" required> 
+                            </label>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- TABLEAU MONTANT -->
+        <section class="prix">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>SOUS-TOTAL</td>
+                        <td class="calcul"></td>
+                    </tr>
+                    <tr>
+                        <td>T.V.A. 20,00%</td>
+                        <td class="calcul"></td>
+                    </tr>
+                    <tr>
+                        <td>PORT & MANUTENTION</td>
+                        <td class="calcul"></td>
+                    </tr>
+                    <tr>
+                        <td>TOTAL DU (TOTAC TTC)</td>
+                        <td class="calcul"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- REMISE -->
+        <section class="remise">
+            <div>N.B. Votre facture a dépassé 1000€, vous avez obtenu pour votre prochaine facture une remise de 140,4€ représentant 5% de votre commande ci-dessus</div>
+        </section>
+    </main>
+    <footer>
+        <p>Veuillez rédiger tous les chèques à l'ordre de <input type="text" id="societe" name="societe" placeholder="nom de la société émettrice" required> </p>
+        <p>Pour toute question concernant cette facture, veuillez contacter : <input type="text" id="adresse" name="adresse" placeholder="adresse de la société" required> au <input type="text" id="telephone" name="telephone" placeholder="entrez un numéro de téléphone valide" required> ou à l'adresse <input type="email" name="email" placeholder="adresse de messagerie"></p>
+        <button onclick="myFunction()">Imprimer cette page</button>
+    </footer>
+
+    <script>
+        function myFunction() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
+
+
+            
+            
+            

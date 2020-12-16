@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evenement</title>
+
+    <style> 
+
+        img{
+            height: 200px; width: 300px;
+        }
+
+        button{
+            position : relative; left : 70px;
+        }
+
+        h1{
+            display : inline-block;
+        }
+    </style>
 </head>
 
 <body>
-     <h1>Mon Titre H1</h1>
+     <h1> Miaouuu !!!</h1>
      <div>
      <img id = "monImage" src="screen-corrections/chaton-073315.jpg" alt="image d'un chaton" >
     </div>
@@ -15,7 +30,44 @@
      <button id = "changerImage" >Changer Image</button>
 
 
-    <script src="js/chatclique.js"></script>
+    <!-- <script src="js/chatclique.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            jQuery(document).ready(function($){
+                var imgChat = $('#monImage'); //sélectionne tous les éléments ayant la classe "avion"
+                var btn = $ ('#changerImage'); // sélectionner le 1er avion
+            
+                btn.click(function(){
+                        btn.css({
+                            'background': '#fa8963',
+                            'color' : "#fff",
+                            'font-weight' : 'bold',
+                            'border-radius' : '30px',
+                            'opacity' : '0.5',
+                            'position' : 'relative',
+                            'left' : '70px',
+                        });  
+                        
+                        $('h1').mouseover(function(){
+                            $('h1').css({
+                                 'height' : '80px',
+                                 'width' : '25%',
+                                 'background' : "#fa8963",
+                                 'opacity' : '0.5',
+                                 'text-align' : 'center', 
+                                  'line-height' : '80px',                               
+                            });
+                            $('h1').text('Ce chat est trop mignon !');
+                         });       
+                 }); 
+
+                    btn.click(function(){
+                        $('#monImage').attr('src', 'screen-corrections/chat-161132.jpg');
+                    });
+            }); 
+        
+        </script>
+
 </body>
 </html>
 

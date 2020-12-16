@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5</title>
+
+    <style>
+        img{
+            height: 300px; width: 250px;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+        <img id ="img1" src="image/img_1.webp" alt="">
+        <img id ="img2" src="image/img_2.jpg" alt="">
+        <img id ="img3" src="image/img_3.webp" alt="">
+        <img id ="img4" src="image/img_4.jpg" alt="">
+        <img id ="img5" src="image/img_5.jpg" alt="">
+    
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            jQuery(document).ready(function(){
+                    $('img').css('display', 'none');
+                    $('#img1').fadeIn(0).delay(5000).fadeOut(0);
+                    $('#img2').delay(5000).fadeIn(0).delay(5000).fadeOut(0);
+                    $('#img3').delay(10025).fadeIn(0).delay(5000).fadeOut(0);
+                    $('#img4').delay(15050).fadeIn(0).delay(5000).fadeOut(0);
+                    $('#img5').delay(20075).fadeIn(0).delay(5000).fadeOut(0);
+                    });
+        </script>
+  </body>

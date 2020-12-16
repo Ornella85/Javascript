@@ -1,4 +1,4 @@
-<html>
+{/* <html>
 <head>
 <title>Test syntaxe DOM</title>
 	<style>div{ min-width: 500px; min-height: 300px; border: 3px solid; padding: 50px; } </style>
@@ -10,8 +10,6 @@
 	<p>deuxième paragraphe</p>
 	<p>troisième paragraphe</p>
 </div>
-
-
 <script>
 function modifCSS() {
  for(var i = 0; i < document.getElementsByTagName("p").length; i++) {
@@ -25,15 +23,5 @@ function modifCSS() {
 }
 document.getElementsByTagName("div")[0].onclick = modifCSS;
 </script>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            jQuery(document).ready(function($){
-                  $('h1').hide(); 
-
-                });
-        </script>
-
 </body>
-</html>
+</html> */}

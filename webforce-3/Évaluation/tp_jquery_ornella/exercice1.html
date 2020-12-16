@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+
+    <style>
+        .bleu{
+            height: 100px;
+            width: 100px;
+            background: rgb(51, 102, 153);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bleu"></div>
+    <button id ="change">change</button>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            jQuery(document).ready(function(){
+                var bleu = $('.bleu');
+                var btn = $('#change');
+
+                btn.click(function(){
+                       bleu.css({
+                        'background': 'rgb(54, 194, 11)',
+                       });
+                    });
+
+            });
+        </script>
+  </body>
+</html>
