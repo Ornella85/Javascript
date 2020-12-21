@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table id="order-entry">
+        <thead>
+            <tr>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Sum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input class="form-calc form-qty" value="1"></td>
+                <td><input class="form-calc form-cost" value="10.00"></td>
+                <td><input class="form-line" value="0" readonly></td>
+            </tr>
+            <tr>
+                <td><input class="form-calc form-qty" value="2"></td>
+                <td><input class="form-calc form-cost" value="5.33"></td>
+                <td><input class="form-line" value="0" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2">Total</td>
+                <td id="total"></td>
+            </tr>
+        </tbody>
+    </table>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function(){
+           
+    $("#order-entry").on("keyup", ".form-calc", function() {
+        var parent = $(this).closest("tr");
+        parent.find(".form-line").val((parent.find(".form-qty").val() * parent.find(".form-cost").val()).toFixed(2));
+        var total = 0;
+        $(".form-line").each(function(){
+            total += parseFloat($(this).val()||0);
+        });
+        $("#total").text(total.toFixed(2));
+    });
+});
+                    
+         
+    </script>
+</body>
+</html>

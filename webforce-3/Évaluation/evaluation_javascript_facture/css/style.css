@@ -72,7 +72,7 @@ header h1{
     background-color: rgb(212, 205, 201);
 }
 
-#client{
+#client1, #client2{
     width: 226px;
 }
 
@@ -88,7 +88,7 @@ h2{
 .produits{
     margin: 20px;
 }
-table, td, th{
+.produits table, td, th{
     border: 1px solid black;
     border-collapse: collapse;
     margin-left: 40px;
@@ -112,12 +112,67 @@ table{
     width: 170px;
     transform: translate(20%);
 }
+.quantiteEcran, .quantiteClavier, .quantiteSouris, .quantiteOrdi{
+    width: 170px;
+    transform: translate(20%);
+}
 
+.ecran, .clavier, .souris, .ordinateur{
+    padding-left: 2px;
+}
 
+.prixEcran, .prixClavier, .prixSouris, .prixOrdi{
+    padding-left: 2px;
+}
 
 /*        TABLEAU MONTANT      */
 
-.calcul{
-    width: 184px;
+.prix table{
+    border-collapse: collapse;
+    transform: translate(7%);
+    margin-top: 70px;
 }
 
+
+
+.sousTotal{
+    text-align: right;
+    border-left: none;
+    border-bottom: none;
+    padding-right: 2px;
+}
+
+.tva, .port, .total{
+    text-align: right;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    padding-right: 2px;
+    width: 85%;
+}
+
+/* REMISE */
+
+.remise{
+    visibility: hidden;
+}
+
+/* FOOTER */
+
+.cheque{
+    margin-top: 50px;
+}
+
+.cheque input{
+    width: 19%;
+    border: none;
+}
+
+.confiance{
+    text-align: center;
+    font-weight: bold;
+}
+
+button{
+    margin-top: 20px;
+}

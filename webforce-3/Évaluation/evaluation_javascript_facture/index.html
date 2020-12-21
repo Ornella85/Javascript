@@ -13,10 +13,10 @@
         <h1>FACTURE</h1>
 
         <div class="formulaire">
-            <div><input type="text" id="societe" name="societe" placeholder="Nom de la société émettrice" required></div>
+            <div><input type="text" id="societe" name="societe" placeholder="Nom de la société émettrice" onchange="copyContent('societe','societe2')" required></div>
             <div><input type="text" id="adresse" name="adresse" placeholder="Adresse de la société" required></div>
-            <div><input type="text" id="telephone" name="telephone" placeholder="Entrez un numéro de téléphone valide" required></div>
-            <div><input type="email" name="email" placeholder="Adresse de messagerie"></div> 
+            <div><input type="text" id="telephone" name="telephone" placeholder="Entrez un numéro de téléphone valide" onchange="copyContent('telephone','telephone2')" required></div>
+            <div><input type="email" id="email" name="email" placeholder="Adresse de messagerie" onchange="copyContent('email','email2')" ></div> 
         </div>
 
 
@@ -167,34 +167,34 @@
 
                 <select name="annee" id="annee">
                     <option value="annee1">
-                        2011
+                        2020
                     </option>
                     <option value="annee2">
-                        2012
-                    </option>
-                    <option value="annee3">
-                        2013
-                    </option>
-                    <option value="annee4">
-                        2014
-                    </option>
-                    <option value="annee5">
-                        2015
-                    </option>
-                    <option value="annee6">
-                        2016
-                    </option>
-                    <option value="annee7">
-                        2017
-                    </option>
-                    <option value="annee8">
-                        2018
-                    </option>
-                    <option value="annee9">
                         2019
                     </option>
+                    <option value="annee3">
+                        2018
+                    </option>
+                    <option value="annee4">
+                        2017
+                    </option>
+                    <option value="annee5">
+                        2016
+                    </option>
+                    <option value="annee6">
+                        2015
+                    </option>
+                    <option value="annee7">
+                        2014
+                    </option>
+                    <option value="annee8">
+                        2013
+                    </option>
+                    <option value="annee9">
+                        2012
+                    </option>
                     <option value="annee10">
-                        2020
+                        2011
                     </option>
                 </select>
                 <!-- <input type="number" id="start" name="trip-start"
@@ -236,31 +236,31 @@
 
                 <div>
                     <label>
-                        <input type="text" id="nomSociété" name="numFacture" placeholder="Nom de la société" required> 
+                        <input type="text" id="nomSociete" name="numSociete" placeholder="Nom de la société" required> 
                     </label>
                  </div>
 
                  <div>
                     <label>
-                        <input type="text" id="nom" name="numFacture" placeholder="Nom" required> 
+                        <input type="text" id="nom" name="nom" placeholder="Nom" onchange="copyContent('nom','nom2')" required> 
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="text" id="rue" name="numFacture" placeholder="Rue" required> 
+                        <input type="text" id="rue" name="rue" placeholder="Rue" required> 
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="text" id="ville" name="numFacture" placeholder="Code postal, Ville" required> 
+                        <input type="text" id="ville" name="ville" placeholder="Code postal, Ville" required> 
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="text" id="numTel" name="numFacture" placeholder="Numéro de téléphone" required> 
+                        <input type="text" id="numTel" name="numTel" placeholder="Numéro de téléphone" required> 
                     </label>
                 </div>
             </div>
@@ -292,31 +292,31 @@
 
                 <div>
                     <label>
-                        <input type="text" id="numFacture" name="numFacture" placeholder="Nom de la société" required> 
+                        <input type="text" id="nomSociete2" name="numFacture" placeholder="Nom de la société" required> 
                     </label>
                 </div> 
 
                 <div>
                     <label>
-                        <input type="text" id="numFacture" name="numFacture" placeholder="Nom" required> 
+                        <input type="text" id="nomSociete3" name="numFacture" placeholder="Nom" required> 
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="text" id="numFacture" name="numFacture" placeholder="Rue" required> 
+                        <input type="text" id="rue2" name="numFacture" placeholder="Rue" required> 
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="text" id="numFacture" name="numFacture" placeholder="Code postal, Ville" required> 
+                        <input type="text" id="ville2" name="numFacture" placeholder="Code postal, Ville" required> 
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="text" id="numFacture" name="numFacture" placeholder="Numéro de téléphone" required> 
+                        <input type="text" id="telephone3" name="numFacture" placeholder="Numéro de téléphone" required> 
                     </label>
                 </div>
 
@@ -329,14 +329,14 @@
         <!-- TABLEAU -->
         <section class="produits">
             <h2>Détails des produits facturés</h2>
-            <table>
+            <table id ="detailsFactures">
                 <thead>
                     <tr>
                         <th>Code produit</th>
                         <th>Libellé produit</th>
                         <th>Prix - Unitaire en euros</th>
                         <th>Quantité commandée</th>
-                        <th>Montant demandé</th>
+                        <th>Montant en Euros</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -344,77 +344,123 @@
                         <td>
                             <label>
                                 <select name="codeProduit" id="codeProduit">
-                                    <option value="codeProduit">
-                                        
+                                    <option value="249.95" id="codeEcran1">
+                                        INOVU 29'' LED CS2900
+                                    </option>
+                                    <option value="199.99" id="codeEcran2">
+                                        LENOVO Y25 - 25
+                                    </option>
+                                    <option value="221.11" id="codeEcran3">
+                                        MONITOR GAMING FALKON
                                     </option>
                                 </select>
                             </label>
                         </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <label>
-                                <input type="number" id="quantite" name="quantite" placeholder="0" required> 
-                            </label>
+                        <td class="ecran">
                         </td>
-                        <td></td>
+                        <td id ="prixEcran"></td>
+                        <td>
+                            <select class ="quantiteEcran" value="1">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td><span class="montantEcran"></span></td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 <select name="codeProduit" id="codeProduit">
-                                    <option value="codeProduit">
-                                        
+                                    <option value="54.99" id="codeClavier1">
+                                        CORSAIR K55 RGB
+                                    </option>
+                                    <option value="129.99" id="codeClavier2">
+                                        RAZER ELITE N°2
+                                    </option>
+                                    <option value="169.99" id="codeClavier3">
+                                        CORSAIR K70 RGB
                                     </option>
                                 </select>
                             </label>
                         </td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <label>
-                                <input type="number" id="quantite" name="quantite" placeholder="0" required> 
-                            </label>
+                        <td class="clavier">
                         </td>
-                        <td></td>
+                        <td id ="prixClavier"></td>
+                        <td>
+                            <select class ="quantiteClavier" value="1">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td><span class="montantClavier"></span></td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 <select name="codeProduit" id="codeProduit">
-                                    <option value="codeProduit">
-                                        
+                                    <option value="100.75" id ='codeSouris1'>
+                                        LOGITECH G PRO
+                                    </option>
+                                    <option value="95.47" id ='codeSouris2'>
+                                        LOGITECH MASTER 3
+                                    </option>
+                                    <option value="50.99" id ='codeSouris3'>
+                                        LOGITECH G502 HERO
                                     </option>
                                 </select>
                             </label>
                         </td>
-                        <td></td>
-                        <td></td>
+                        <td class="souris"></td>
+                        <td id ="prixSouris"></td>
                         <td>
-                            <label>
-                                <input type="number" id="quantite" name="quantite" placeholder="0" required> 
-                            </label>
+                            <select class ="quantiteSouris" value="1">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                         </td>
-                        <td></td>
+                        <td><span class="montantSouris"></span></td>
                     </tr>
                     <tr>
                         <td>
                             <label>
                                 <select name="codeProduit" id="codeProduit">
-                                    <option value="codeProduit">
-                                        
+                                    <option value="459.00" id="codeOrdi1">
+                                        ARGONAUTH AMB ATHLON 3000G 
+                                    </option>
+                                    <option value="559.00" id="codeOrdi2">
+                                        MEGAPORT SUPER MEGA PACK ATLAS
+                                    </option>
+                                    <option value="659.90" id="codeOrdi3">
+                                        PC GAMER RYZEN 3
                                     </option>
                                 </select>
                             </label>
                         </td>
-                        <td></td>
-                        <td></td>
+                        <td class="ordinateur"></td>
+                        <td id ="prixOrdi"></td>
                         <td>
-                            <label>
-                                <input type="number" id="quantite" name="quantite" placeholder="0" required> 
-                            </label>
+                            <select class ="quantiteOrdi" value="1">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                         </td>
-                        <td></td>
+                        <td><span class="montantOrdi"></span></td>
                     </tr>
                 </tbody>
             </table>
@@ -426,20 +472,20 @@
             <table>
                 <tbody>
                     <tr>
-                        <td>SOUS-TOTAL</td>
-                        <td class="calcul"></td>
+                        <td class="sousTotal">SOUS-TOTAL</td>
+                        <td id ="calculst"></td>
                     </tr>
                     <tr>
-                        <td>T.V.A. 20,00%</td>
-                        <td class="calcul"></td>
+                        <td class="tva">T.V.A. 20,00%</td>
+                        <td id="calcultva" value = '20'></td>
                     </tr>
                     <tr>
-                        <td>PORT & MANUTENTION</td>
-                        <td class="calcul"></td>
+                        <td class="port">PORT & MANUTENTION</td>
+                        <td id="calculPort" value = '50.00'></td>
                     </tr>
                     <tr>
-                        <td>TOTAL DU (TOTAC TTC)</td>
-                        <td class="calcul"></td>
+                        <td class="total">TOTAL DU (TOTAL TTC)</td>
+                        <td id="calcul"></td>
                     </tr>
                 </tbody>
             </table>
@@ -450,20 +496,227 @@
         </section>
     </main>
     <footer>
-        <p>Veuillez rédiger tous les chèques à l'ordre de <input type="text" id="societe" name="societe" placeholder="nom de la société émettrice" required> </p>
-        <p>Pour toute question concernant cette facture, veuillez contacter : <input type="text" id="adresse" name="adresse" placeholder="adresse de la société" required> au <input type="text" id="telephone" name="telephone" placeholder="entrez un numéro de téléphone valide" required> ou à l'adresse <input type="email" name="email" placeholder="adresse de messagerie"></p>
+        <p class=" cheque">Veuillez rédiger tous les chèques à l'ordre de <input type="text" id="societe2" name="societe" placeholder="nom de la société émettrice" required> <br> Pour toute question concernant cette facture, veuillez contacter : <input type="text" id="nom2" name="nom" placeholder="Nom" required> au <br> <input type="text" id="telephone2" name="telephone" placeholder="entrez un numéro de téléphone valide" required> ou à l'adresse <input type="email" id="email2" name="email" placeholder="adresse de messagerie"></p>
+        <p class="confiance">Nous vous remercions de votre confiance</p>
         <button onclick="myFunction()">Imprimer cette page</button>
     </footer>
 
-    <script>
-        function myFunction() {
-            window.print();
-        }
-    </script>
+
+    <!-- LIEN VERS LA FEUILLE JAVASCRIPT -->
+    <script src="js/js.js"></script>
+
+
+    <!-- LIEN VERS LA LIBRAIRIE JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            // TABLEAU - Produits - fonction permettant l'affichage du libellé produits et de son prix
+            //                    - fonction permettant le calcul du prix des produits en fonction de la quantité
+
+            // PRODUITS ECRAN
+            jQuery(document).ready(function(){
+                 $("#codeEcran1").click(function() {
+                    $('.ecran').text('Ecran PC Asus');
+                    $('#prixEcran').text(249.95);
+                 
+                 $(".quantiteEcran").click(function() {
+                 var prix = parseFloat($('#codeEcran1').val());
+                    var quantite = parseFloat( $('.quantiteEcran').val());
+                    var montant = prix * quantite; 
+                $('.montantEcran').text(montant); 
+                 });
+               });
+            });
+
+
+            jQuery(document).ready(function(){
+                 $("#codeEcran2").click(function() {
+                    $('.ecran').text('Ecran PC Lenovo');
+                    $('#prixEcran').text(199.99);
+
+                    $(".quantiteEcran").click(function() {
+                 var prix = parseFloat($('#codeEcran2').val());
+                    var quantite = parseFloat( $('.quantiteEcran').val());
+                    var montant = prix * quantite; 
+                $('.montantEcran').text(montant); 
+                 });
+                });
+            });
+
+            jQuery(document).ready(function(){
+                 $("#codeEcran3").click(function() {
+                    $('.ecran').text('Ecran PC Falkon');
+                    $('#prixEcran').text(221.11);
+
+                    $(".quantiteEcran").click(function() {
+                 var prix = parseFloat($('#codeEcran3').val());
+                    var quantite = parseFloat( $('.quantiteEcran').val());
+                    var montant = prix * quantite; 
+                $('.montantEcran').text(montant); 
+                 });
+                 });
+
+               
+            });
+
+
+            // PRODUITS CLAVIER
+            jQuery(document).ready(function(){
+                 $("#codeClavier1").click(function() {
+                    $('.clavier').text('Clavier filaire noir');
+                    $('#prixClavier').text(54.99);
+
+                    
+                    $(".quantiteClavier").click(function() {
+                 var prix = parseFloat($('#codeClavier1').val());
+                    var quantite = parseFloat( $('.quantiteClavier').val());
+                    var montant = prix * quantite; 
+                $('.montantClavier').text(montant); 
+                 });
+                 });
+            });
+
+
+            jQuery(document).ready(function(){
+                 $("#codeClavier2").click(function() {
+                    $('.clavier').text('Clavier ergonomique filaire');
+                    $('#prixClavier').text(129.99);
+
+                    $(".quantiteClavier").click(function() {
+                 var prix = parseFloat($('#codeClavier2').val());
+                    var quantite = parseFloat( $('.quantiteClavier').val());
+                    var montant = prix * quantite; 
+                $('.montantClavier').text(montant); 
+                 });
+                 });
+            });
+
+
+            jQuery(document).ready(function(){
+                 $("#codeClavier3").click(function() {
+                    $('.clavier').text('Clavier gamer');
+                    $('#prixClavier').text(169.99);
+                    
+                    $(".quantiteClavier").click(function() {
+                 var prix = parseFloat($('#codeClavier3').val());
+                    var quantite = parseFloat( $('.quantiteClavier').val());
+                    var montant = prix * quantite; 
+                $('.montantClavier').text(montant); 
+                 });
+                 });
+            });
+
+
+             // PRODUITS SOURIS
+            jQuery(document).ready(function(){
+                 $("#codeSouris1").click(function() {
+                    $('.souris').text('Souris sans fil Light Speed');
+                    $('#prixSouris').text(100.75);
+
+                    $(".quantiteSouris").click(function() {
+                 var prix = parseFloat($('#codeSouris1').val());
+                    var quantite = parseFloat( $('.quantiteSouris').val());
+                    var montant = prix * quantite; 
+                $('.montantSouris').text(montant); 
+                 });
+                 });
+            });
+
+            jQuery(document).ready(function(){
+                 $("#codeSouris2").click(function() {
+                    $('.souris').text('Souris 7 boutons sans fil');
+                    $('#prixSouris').text(95.47);
+
+                    
+                    $(".quantiteSouris").click(function() {
+                 var prix = parseFloat($('#codeSouris2').val());
+                    var quantite = parseFloat( $('.quantiteSouris').val());
+                    var montant = prix * quantite; 
+                $('.montantSouris').text(montant); 
+                 });
+                 });
+            });
+
+            jQuery(document).ready(function(){
+                 $("#codeSouris3").click(function() {
+                    $('.souris').text('Souris 11 boutons sans fil');
+                    $('#prixSouris').text(50.99);
+
+                    $(".quantiteSouris").click(function() {
+                 var prix = parseFloat($('#codeSouris3').val());
+                    var quantite = parseFloat( $('.quantiteSouris').val());
+                    var montant = prix * quantite; 
+                $('.montantSouris').text(montant); 
+                 });
+                 });
+            });
+
+
+            // PRODUITS ORDINATEUR
+
+            jQuery(document).ready(function(){
+                 $("#codeOrdi1").click(function() {
+                    $('.ordinateur').text('Ordinateur de bureau');
+                    $('#prixOrdi').text(459.00);
+
+                    $(".quantiteOrdi").click(function() {
+                 var prix = parseFloat($('#codeOrdi1').val());
+                    var quantite = parseFloat( $('.quantiteOrdi').val());
+                    var montant = prix * quantite; 
+                $('.montantOrdi').text(montant); 
+                 });
+                 });
+            });
+
+            jQuery(document).ready(function(){
+                 $("#codeOrdi2").click(function() {
+                    $('.ordinateur').text('Unité centrale PC complet');
+                    $('#prixOrdi').text(559.00);
+
+                    $(".quantiteOrdi").click(function() {
+                 var prix = parseFloat($('#codeOrdi2').val());
+                    var quantite = parseFloat( $('.quantiteOrdi').val());
+                    var montant = prix * quantite; 
+                $('.montantOrdi').text(montant); 
+                 });
+                 });
+            });
+
+            jQuery(document).ready(function(){
+                 $("#codeOrdi3").click(function() {
+                    $('.ordinateur').text('Ordinateur unité centrale');
+                    $('#prixOrdi').text(659.90);
+
+                    $(".quantiteOrdi").click(function() {
+                 var prix = parseFloat($('#codeOrdi3').val());
+                    var quantite = parseFloat( $('.quantiteOrdi').val());
+                    var montant = prix * quantite; 
+                $('.montantOrdi').text(montant); 
+
+                 });
+                 });
+            });
+            
+            // TABLEAU - Calcul sous Total 
+
+            // jQuery(document).ready(function(){
+               
+            // });
+
+            // if(!isNaN('.montantOrdi') === 0){
+                    
+            //     }
+            
+
+            // TABLEAU - Tva
+                    
+
+        </script>
+
 </body>
 </html>
 
 
             
             
-            
+        
