@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Charly Delayze et Ornella Lallier" />
 
-    <link rel="stylesheet" href="css/style.css">
-    <title>Facture</title>
-</head>
+        <link rel="stylesheet" href="css/style.css">
+        
+        <title>Facture</title>
+    </head>
+
 <body>
-    <!-- HEADER -->
+
+    <!-- ----------- HEADER ----------- -->
+    <!-- PARTIE HAUTE DE LA FACTURE  -->
     <header>
         <h1>FACTURE</h1>
 
@@ -28,186 +33,30 @@
                 </label>
             </div>
 
-            <label>
-                Date :
-                <select name="jour" id="jour">
-                    <option value="date1">
-                        1
-                    </option>
-                    <option value="date2">
-                        2
-                    </option>
-                    <option value="date3">
-                        3
-                    </option>
-                    <option value="date4">
-                        4
-                    </option>
-                    <option value="date5">
-                        5
-                    </option>
-                    <option value="date6">
-                        6
-                    </option>
-                    <option value="date7">
-                        7
-                    </option>
-                    <option value="date8">
-                        8
-                    </option>
-                    <option value="date9">
-                        9
-                    </option>
-                    <option value="date10">
-                        10
-                    </option>
-                    <option value="date11">
-                        11
-                    </option>
-                    <option value="date12">
-                        12
-                    </option>
-                    <option value="date13">
-                        13
-                    </option>
-                    <option value="date14">
-                        14
-                    </option>
-                    <option value="date15">
-                        15
-                    </option>
-                    <option value="date16">
-                        16
-                    </option>
-                    <option value="date17">
-                        17
-                    </option>
-                    <option value="date18">
-                        18
-                    </option>
-                    <option value="date19">
-                        19
-                    </option>
-                    <option value="date20">
-                        20
-                    </option>
-                    <option value="date21">
-                        21
-                    </option>
-                    <option value="date22">
-                        22
-                    </option>
-                    <option value="date23">
-                        23
-                    </option>
-                    <option value="date24">
-                        24
-                    </option>
-                    <option value="date25">
-                        25
-                    </option>
-                    <option value="date26">
-                        26
-                    </option>
-                    <option value="date27">
-                        27
-                    </option>
-                    <option value="date28">
-                        28
-                    </option>
-                    <option value="date29">
-                        29
-                    </option>
-                    <option value="date30">
-                        30
-                    </option>
-                    <option value="date31">
-                        31
-                    </option>
+            <label class = "calendrier"> Date :
+                <select name='jour' id='jour'>
+                    <option value = '0'> </option>
                 </select>
 
-                <select name="mois" id="mois">
-                    <option value="mois1">
-                        1
-                    </option>
-                    <option value="mois2">
-                        2
-                    </option>
-                    <option value="mois3">
-                        3
-                    </option>
-                    <option value="mois4">
-                        4
-                    </option>
-                    <option value="mois5">
-                        5
-                    </option>
-                    <option value="mois6">
-                        6
-                    </option>
-                    <option value="mois7">
-                        7
-                    </option>
-                    <option value="mois8">
-                        8
-                    </option>
-                    <option value="mois9">
-                        9
-                    </option>
-                    <option value="mois10">
-                        10
-                    </option>
-                    <option value="mois11">
-                        11
-                    </option>
-                    <option value="mois12">
-                        12
-                    </option>
+                <select name='mois' id='mois'>
+                    <option value='0'></option>
                 </select>
 
-                <select name="annee" id="annee">
-                    <option value="annee1">
-                        2020
-                    </option>
-                    <option value="annee2">
-                        2019
-                    </option>
-                    <option value="annee3">
-                        2018
-                    </option>
-                    <option value="annee4">
-                        2017
-                    </option>
-                    <option value="annee5">
-                        2016
-                    </option>
-                    <option value="annee6">
-                        2015
-                    </option>
-                    <option value="annee7">
-                        2014
-                    </option>
-                    <option value="annee8">
-                        2013
-                    </option>
-                    <option value="annee9">
-                        2012
-                    </option>
-                    <option value="annee10">
-                        2011
-                    </option>
+                <select name='annee' id='annee'>
+                    <option value='0'></option>
                 </select>
-                <!-- <input type="number" id="start" name="trip-start"
-                placeholder="1"
-                min="1" max="31"> -->
-            </label>
+         </label>
         </div>
 
         <div class="clear"></div>
     </header>
-    <!-- MAIN -->
+
+
+    <!-- ----------- MAIN ----------- -->
+    <!-- PARTIE CENTRALE -->
     <main>
-        <!-- COORDONNEES -->
+        
+        <!-- Entrées des coordonnées du client et à qui il souhaite expédier -->
         <section class="coordonnees">
             <div class="destinataire">
                 <p>À :</p>
@@ -326,7 +175,8 @@
         </section>
 
 
-        <!-- TABLEAU -->
+        <!-- PARTIE COMMANDE -->
+        <!-- TABLEAU 1 : choix des produits, affichage des prix par unité, de la quantité et  montant -->
         <section class="produits">
             <h2>Détails des produits facturés</h2>
             <table id ="detailsFactures">
@@ -460,41 +310,50 @@
                                 <option value="5">5</option>
                             </select>
                         </td>
-                        <td><span class="montantOrdi"></span></td>
+                        <td><span class="montantOrdi" ></span></td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
 
-        <!-- TABLEAU MONTANT -->
+        <!-- PARTIE PRIX -->
+        <!-- TABLEAU 2 : Sous total, Tva, Port et Total de la facture   -->
         <section class="prix">
             <table>
                 <tbody>
                     <tr>
                         <td class="sousTotal">SOUS-TOTAL</td>
-                        <td id ="calculst"></td>
+                        <td id="calculSt" ></td>
                     </tr>
                     <tr>
                         <td class="tva">T.V.A. 20,00%</td>
-                        <td id="calcultva" value = '20'></td>
+                        <td class ="calcultva" value = '20'></td>
                     </tr>
                     <tr>
                         <td class="port">PORT & MANUTENTION</td>
-                        <td id="calculPort" value = '50.00'></td>
+                        <td class ="calculPort" value = '50.00'></td>
                     </tr>
                     <tr>
                         <td class="total">TOTAL DU (TOTAL TTC)</td>
-                        <td id="calcul"></td>
+                        <td class ="calcul"></td>
                     </tr>
                 </tbody>
             </table>
         </section>
-        <!-- REMISE -->
+
+
+        <!-- PARTIE REMISE  -->
         <section class="remise">
             <div>N.B. Votre facture a dépassé 1000€, vous avez obtenu pour votre prochaine facture une remise de 140,4€ représentant 5% de votre commande ci-dessus</div>
         </section>
     </main>
+
+
+    <!-- ----------- FOOTER ----------- -->
+        <!-- PARTIE FINALE  -->
+        <!-- Affiche les coordonnées et Bouton Imprimer -->
+
     <footer>
         <p class=" cheque">Veuillez rédiger tous les chèques à l'ordre de <input type="text" id="societe2" name="societe" placeholder="nom de la société émettrice" required> <br> Pour toute question concernant cette facture, veuillez contacter : <input type="text" id="nom2" name="nom" placeholder="Nom" required> au <br> <input type="text" id="telephone2" name="telephone" placeholder="entrez un numéro de téléphone valide" required> ou à l'adresse <input type="email" id="email2" name="email" placeholder="adresse de messagerie"></p>
         <p class="confiance">Nous vous remercions de votre confiance</p>
@@ -502,57 +361,71 @@
     </footer>
 
 
+     
+     <!-- ----------- PARTIE JQUERY  ----------- -->
+
+
     <!-- LIEN VERS LA FEUILLE JAVASCRIPT -->
     <script src="js/js.js"></script>
-
 
     <!-- LIEN VERS LA LIBRAIRIE JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <script>
-            // TABLEAU - Produits - fonction permettant l'affichage du libellé produits et de son prix
-            //                    - fonction permettant le calcul du prix des produits en fonction de la quantité
+
+            // DATE DU JOUR 
+         
+
+            // TABLEAU 1 - Produits (matériel informatique) :
+            //                      - fonction permettant l'affichage du libellé produits et de son prix
+            //                      - fonction permettant le calcul du prix des produits en fonction de la quantité
 
             // PRODUITS ECRAN
             jQuery(document).ready(function(){
                  $("#codeEcran1").click(function() {
-                    $('.ecran').text('Ecran PC Asus');
-                    $('#prixEcran').text(249.95);
+                    $('.ecran').text('Ecran PC Asus').css({ 'transform' : 'translate(20%)'});
+                    $('#prixEcran').text(249.95).css({ 'transform' : 'translate(40%)'});
                  
                  $(".quantiteEcran").click(function() {
                  var prix = parseFloat($('#codeEcran1').val());
                     var quantite = parseFloat( $('.quantiteEcran').val());
                     var montant = prix * quantite; 
-                $('.montantEcran').text(montant); 
-                 });
+                $('.montantEcran').text(montant.toFixed(2)); 
+
+               
+                });
                });
             });
 
 
             jQuery(document).ready(function(){
                  $("#codeEcran2").click(function() {
-                    $('.ecran').text('Ecran PC Lenovo');
-                    $('#prixEcran').text(199.99);
+                    $('.ecran').text('Ecran PC Lenovo').css({ 'transform' : 'translate(20%)'});
+                    $('#prixEcran').text(199.99).css({ 'transform' : 'translate(40%)'});
 
                     $(".quantiteEcran").click(function() {
                  var prix = parseFloat($('#codeEcran2').val());
                     var quantite = parseFloat( $('.quantiteEcran').val());
                     var montant = prix * quantite; 
-                $('.montantEcran').text(montant); 
+                $('.montantEcran').text(montant.toFixed(2)); 
+
+                
                  });
                 });
             });
 
             jQuery(document).ready(function(){
                  $("#codeEcran3").click(function() {
-                    $('.ecran').text('Ecran PC Falkon');
-                    $('#prixEcran').text(221.11);
+                    $('.ecran').text('Ecran PC Falkon').css({ 'transform' : 'translate(20%)'});
+                    $('#prixEcran').text(221.11).css({ 'transform' : 'translate(40%)'});
 
                     $(".quantiteEcran").click(function() {
                  var prix = parseFloat($('#codeEcran3').val());
                     var quantite = parseFloat( $('.quantiteEcran').val());
                     var montant = prix * quantite; 
-                $('.montantEcran').text(montant); 
+                $('.montantEcran').text(montant.toFixed(2)); 
+
+                
                  });
                  });
 
@@ -563,15 +436,17 @@
             // PRODUITS CLAVIER
             jQuery(document).ready(function(){
                  $("#codeClavier1").click(function() {
-                    $('.clavier').text('Clavier filaire noir');
-                    $('#prixClavier').text(54.99);
+                    $('.clavier').text('Clavier filaire noir').css({ 'transform' : 'translate(20%)'});
+                    $('#prixClavier').text(54.99).css({ 'transform' : 'translate(40%)'});
 
                     
                     $(".quantiteClavier").click(function() {
                  var prix = parseFloat($('#codeClavier1').val());
                     var quantite = parseFloat( $('.quantiteClavier').val());
                     var montant = prix * quantite; 
-                $('.montantClavier').text(montant); 
+                $('.montantClavier').text(montant.toFixed(2)); 
+
+               
                  });
                  });
             });
@@ -579,14 +454,16 @@
 
             jQuery(document).ready(function(){
                  $("#codeClavier2").click(function() {
-                    $('.clavier').text('Clavier ergonomique filaire');
-                    $('#prixClavier').text(129.99);
+                    $('.clavier').text('Clavier ergonomique filaire').css({ 'transform' : 'translate(20%)'});
+                    $('#prixClavier').text(129.99).css({ 'transform' : 'translate(40%)'});
 
                     $(".quantiteClavier").click(function() {
                  var prix = parseFloat($('#codeClavier2').val());
                     var quantite = parseFloat( $('.quantiteClavier').val());
                     var montant = prix * quantite; 
-                $('.montantClavier').text(montant); 
+                $('.montantClavier').text(montant.toFixed(2)); 
+
+                
                  });
                  });
             });
@@ -594,14 +471,16 @@
 
             jQuery(document).ready(function(){
                  $("#codeClavier3").click(function() {
-                    $('.clavier').text('Clavier gamer');
-                    $('#prixClavier').text(169.99);
+                    $('.clavier').text('Clavier gamer').css({ 'transform' : 'translate(20%)'});
+                    $('#prixClavier').text(169.99).css({ 'transform' : 'translate(40%)'});
                     
                     $(".quantiteClavier").click(function() {
                  var prix = parseFloat($('#codeClavier3').val());
                     var quantite = parseFloat( $('.quantiteClavier').val());
                     var montant = prix * quantite; 
-                $('.montantClavier').text(montant); 
+                $('.montantClavier').text(montant.toFixed(2)); 
+
+               
                  });
                  });
             });
@@ -610,43 +489,48 @@
              // PRODUITS SOURIS
             jQuery(document).ready(function(){
                  $("#codeSouris1").click(function() {
-                    $('.souris').text('Souris sans fil Light Speed');
-                    $('#prixSouris').text(100.75);
+                    $('.souris').text('Souris sans fil Light Speed').css({ 'transform' : 'translate(20%)'});
+                    $('#prixSouris').text(100.75).css({ 'transform' : 'translate(40%)'});
 
                     $(".quantiteSouris").click(function() {
                  var prix = parseFloat($('#codeSouris1').val());
                     var quantite = parseFloat( $('.quantiteSouris').val());
                     var montant = prix * quantite; 
-                $('.montantSouris').text(montant); 
+                $('.montantSouris').text(montant.toFixed(2)); 
+
+                
                  });
                  });
             });
 
             jQuery(document).ready(function(){
                  $("#codeSouris2").click(function() {
-                    $('.souris').text('Souris 7 boutons sans fil');
-                    $('#prixSouris').text(95.47);
+                    $('.souris').text('Souris 7 boutons sans fil').css({ 'transform' : 'translate(20%)'});
+                    $('#prixSouris').text(95.47).css({ 'transform' : 'translate(40%)'});
 
                     
                     $(".quantiteSouris").click(function() {
                  var prix = parseFloat($('#codeSouris2').val());
                     var quantite = parseFloat( $('.quantiteSouris').val());
                     var montant = prix * quantite; 
-                $('.montantSouris').text(montant); 
+                $('.montantSouris').text(montant.toFixed(2)); 
+
                  });
                  });
             });
 
             jQuery(document).ready(function(){
                  $("#codeSouris3").click(function() {
-                    $('.souris').text('Souris 11 boutons sans fil');
-                    $('#prixSouris').text(50.99);
+                    $('.souris').text('Souris 11 boutons sans fil').css({ 'transform' : 'translate(20%)'});
+                    $('#prixSouris').text(50.99).css({ 'transform' : 'translate(40%)'});
 
                     $(".quantiteSouris").click(function() {
                  var prix = parseFloat($('#codeSouris3').val());
                     var quantite = parseFloat( $('.quantiteSouris').val());
                     var montant = prix * quantite; 
-                $('.montantSouris').text(montant); 
+                $('.montantSouris').text(montant.toFixed(2)); 
+
+                
                  });
                  });
             });
@@ -656,61 +540,101 @@
 
             jQuery(document).ready(function(){
                  $("#codeOrdi1").click(function() {
-                    $('.ordinateur').text('Ordinateur de bureau');
-                    $('#prixOrdi').text(459.00);
+                    $('.ordinateur').text('Ordinateur de bureau').css({ 'transform' : 'translate(20%)'});
+                    $('#prixOrdi').text(459.00).css({ 'transform' : 'translate(40%)'});
 
                     $(".quantiteOrdi").click(function() {
                  var prix = parseFloat($('#codeOrdi1').val());
                     var quantite = parseFloat( $('.quantiteOrdi').val());
                     var montant = prix * quantite; 
-                $('.montantOrdi').text(montant); 
+                $('.montantOrdi').text(montant.toFixed(2)); 
+
+                
                  });
                  });
             });
 
             jQuery(document).ready(function(){
                  $("#codeOrdi2").click(function() {
-                    $('.ordinateur').text('Unité centrale PC complet');
-                    $('#prixOrdi').text(559.00);
+                    $('.ordinateur').text('Unité centrale PC complet').css({ 'transform' : 'translate(20%)'});
+                    $('#prixOrdi').text(559.00).css({ 'transform' : 'translate(40%)'});
 
                     $(".quantiteOrdi").click(function() {
                  var prix = parseFloat($('#codeOrdi2').val());
                     var quantite = parseFloat( $('.quantiteOrdi').val());
                     var montant = prix * quantite; 
-                $('.montantOrdi').text(montant); 
+                $('.montantOrdi').text(montant.toFixed(2)); 
+
+                
                  });
                  });
             });
 
             jQuery(document).ready(function(){
                  $("#codeOrdi3").click(function() {
-                    $('.ordinateur').text('Ordinateur unité centrale');
-                    $('#prixOrdi').text(659.90);
+                    $('.ordinateur').text('Ordinateur unité centrale').css({ 'transform' : 'translate(20%)'});
+                    $('#prixOrdi').text(659.90).css({ 'transform' : 'translate(40%)'});
 
-                    $(".quantiteOrdi").click(function() {
-                 var prix = parseFloat($('#codeOrdi3').val());
+                    $(".quantiteOrdi").click(function(montant) {
+                    var prix = parseFloat($('#codeOrdi3').val());
                     var quantite = parseFloat( $('.quantiteOrdi').val());
                     var montant = prix * quantite; 
-                $('.montantOrdi').text(montant); 
+                $('.montantOrdi').text(montant.toFixed(2)); 
 
+               
                  });
                  });
             });
-            
-            // TABLEAU - Calcul sous Total 
+            // FIN - TABLEAU 1 - Produits (matériel informatique)
 
-            // jQuery(document).ready(function(){
+
+            
+            // TABLEAU 2 - Calcul sous Total - Tva - Port - Total
+            jQuery(document).ready(function(){
+                $("#calculSt").click(function(){
+                    var montantEcran = parseFloat($('#codeEcran1').val());
+                    var montantEcran = parseFloat($('#codeEcran2').val()); 
+                    var montantEcran = parseFloat($('#codeEcran3').val());
+                    var montantClavier = parseFloat($('#codeClavier1').val());
+                    var montantClavier = parseFloat($('#codeClavier2').val());
+                    var montantClavier = parseFloat($('#codeClavier3').val());
+                    var montantSouris = parseFloat($('#codeSouris1').val());
+                    var montantSouris = parseFloat($('#codeSouris2').val());
+                    var montantSouris = parseFloat($('#codeSouris3').val());
+                    var montantOrdi = parseFloat($('#codeOrdi1').val());
+                    var montantOrdi = parseFloat($('#codeOrdi2').val());
+                    var montantOrdi = parseFloat($('#codeOrdi3').val());
+                    var quantiteEcran = parseFloat($('.quantiteEcran').val());
+                    var quantiteClavier = parseFloat($('.quantiteClavier').val());
+                    var quantiteSouris = parseFloat($('.quantiteSouris').val());
+                    var quantiteOrdi = parseFloat($('.quantiteOrdi').val());
+
+                    var calculSt1 = (montantEcran * quantiteEcran) + (montantClavier * quantiteClavier) + (montantSouris * quantiteSouris) + (montantOrdi * quantiteOrdi);
+                    $("#calculSt").text(calculSt1.toFixed(2));
+
+                   
+                    var prix = calculSt1;
+                    var tva = 20;
+                    result = prix * (tva / 100);
+                    $(".calcultva").text(result.toFixed(2));
+                    
+                    var port = 50;
+                    $('.calculPort').text(port);
+
+                    var calculTotal = calculSt1 + result + port; 
+                    $('.calcul').text(calculTotal.toFixed(2));
+
+
+                    if(!isNaN(calculTotal)){
+                    if(calculTotal >= 1000){
+                        $('.remise').css({'visibility':'visible'});
+                    } else {
+                        $('.remise').css({'visibility':'hidden'});
+                    } 
+                    } 
                
-            // });
-
-            // if(!isNaN('.montantOrdi') === 0){
-                    
-            //     }
-            
-
-            // TABLEAU - Tva
-                    
-
+             });
+            });
         </script>
 
 </body>

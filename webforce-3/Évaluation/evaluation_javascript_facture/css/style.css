@@ -10,7 +10,7 @@
 /*  BODY ADAPTE A L'IMPRESSION */
 body{
     margin: 0 auto;
-    width: 60%;
+    width: 80%;
     height: 1200px;
 }
 
@@ -22,14 +22,20 @@ header h1{
 
 
 /*  LES INPUTS DANS LE HEADER   */
+.formulaire{
+        padding-left: 50px;
+}
+
 .formulaire input{
     width: 220px;
     margin: 3px;
+    
 }
 
 /*  LA CLASS FACTURE */
 .facture{
     float: right;
+    padding-right: 126px;
 }
 
 .facture label{
@@ -59,7 +65,7 @@ header h1{
 }
 
 .expedier{
-    margin-left: 660px;
+    margin-left: 820px;
 }
 
 .destinataire p, .expedier p{
@@ -72,9 +78,10 @@ header h1{
     background-color: rgb(212, 205, 201);
 }
 
-#client1, #client2{
+#client{
     width: 226px;
 }
+
 
 
 /*        TABLEAU DÉTAILS DES PRODUITS       */
@@ -133,7 +140,9 @@ table{
     margin-top: 70px;
 }
 
-
+.calcul{
+    width: 184px;
+}
 
 .sousTotal{
     text-align: right;
@@ -148,13 +157,21 @@ table{
     border-left: none;
     border-bottom: none;
     padding-right: 2px;
-    width: 85%;
 }
 
 /* REMISE */
 
 .remise{
     visibility: hidden;
+    border: 2px solid black;
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 100px;
 }
 
 /* FOOTER */
@@ -175,4 +192,202 @@ table{
 
 button{
     margin-top: 20px;
+}
+
+
+
+/* PARTIE RESPONSIVE */
+
+@media (max-width : 600px){
+    /*  LA CLASS FACTURE */
+    .facture{
+        float: right;
+        margin-top: 10px;
+    }
+
+    /*                  SECTION COORDONNEES              */
+    .destinataire, .expedier{
+        display: inline-block;
+    }
+
+    .expedier{
+        margin-left: 30px;
+    }
+
+    .destinataire p, .expedier p{
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .destinataire input, .expedier input{
+        width: 150px;
+        background-color: rgb(212, 205, 201);
+    }
+
+    #client{
+        width: 156px;
+    }
+    
+
+    /*       INTERIEUR TABLEAU DÉTAILS DES PRODUITS       */
+
+    #codeProduit{
+        width: 75px;
+        margin-right: 20px;
+        transform: translate(20%);
+    }
+
+    #quantite{
+        width: 50px;
+        transform: translate(20%);
+    }
+
+    .codeProd{
+        width: 100px;
+    }
+    .quantiteEcran, .quantiteClavier, .quantiteSouris, .quantiteOrdi{
+        width: 50px;
+        transform: translate(20%);
+    }
+}
+
+
+@media (min-width : 600px){
+
+    /*                  SECTION COORDONNEES              */
+    .destinataire, .expedier{
+        display: inline-block;
+        padding-left: 50px;
+    }
+
+    .expedier{
+        margin-left: 50px;
+    }
+
+    .destinataire p, .expedier p{
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .destinataire input, .expedier input{
+        width: 150px;
+        background-color: rgb(212, 205, 201);
+    }
+
+    #client{
+        width: 156px;
+    }
+
+    /*       INTERIEUR TABLEAU DÉTAILS DES PRODUITS       */
+
+    #codeProduit{
+        width: 70px;
+        margin-right: 20px;
+        transform: translate(20%);
+    }
+
+    #quantite{
+        width: 50px;
+        transform: translate(20%);
+    }
+
+    .codeProd{
+        width: 80px;
+    }
+    .quantiteEcran, .quantiteClavier, .quantiteSouris, .quantiteOrdi{
+        width: 70px;
+        transform: translate(20%);
+    }
+}
+
+@media (min-width : 1000px){
+    /*                  SECTION COORDONNEES              */
+    .destinataire, .expedier{
+        display: inline-block;
+    }
+
+    .expedier{
+        margin-left: 225px;
+    }
+
+    .destinataire p, .expedier p{
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .destinataire input, .expedier input{
+        width: 220px;
+        background-color: rgb(212, 205, 201);
+    }
+
+    #client{
+        width: 226px;
+    }
+    
+    /*       INTERIEUR TABLEAU DÉTAILS DES PRODUITS       */
+
+    #codeProduit{
+        width: 110px;
+        margin-right: 20px;
+        transform: translate(20%);
+    }
+
+    #quantite{
+        width: 120px;
+        transform: translate(20%);
+    }
+
+    .codeProd{
+        width: 120px;
+    }
+    .quantiteEcran, .quantiteClavier, .quantiteSouris, .quantiteOrdi{
+        width: 110px;
+        transform: translate(20%);
+    }
+}
+
+@media (min-width : 1500px){
+    /*                  SECTION COORDONNEES              */
+    .destinataire, .expedier{
+        display: inline-block;
+    }
+
+    .expedier{
+         margin-left: 810px;
+    }
+
+    .destinataire p, .expedier p{
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .destinataire input, .expedier input{
+        width: 220px;
+        background-color: rgb(212, 205, 201);
+    }
+
+    #client{
+        width: 226px;
+    }
+
+    /*       INTERIEUR TABLEAU DÉTAILS DES PRODUITS       */
+
+    #codeProduit{
+        width: 170px;
+        margin-right: 20px;
+        transform: translate(20%);
+    }
+
+    #quantite{
+        width: 170px;
+        transform: translate(20%);
+    }
+
+    .codeProd{
+        width: 170px;
+    }
+    .quantiteEcran, .quantiteClavier, .quantiteSouris, .quantiteOrdi{
+        width: 170px;
+        transform: translate(20%);
+    }
 }
