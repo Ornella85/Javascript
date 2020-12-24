@@ -1,0 +1,111 @@
+#menu-panel{
+    width: 240px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: block;
+    background-color: #f4806d;
+    transform: translateX(-239px);
+    transition: transform 0.2s ease-in;
+}
+
+#menu-panel.show{
+    transform: translateX(0);
+}
+
+.c-hamburger{
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 1;
+    transform: translateX(0px);
+    transition: transform 0.2s ease-in;
+    position: relative;
+}
+
+.c-hamburger:focus{  /*  permet de cibler un élément lorsque celui-ci reçoit le focus (soit il est sélectionné à l'aide du clavier, soit il est activé avec la souris comme par exemple le champ d'un formulaire).*/
+    outline: none; /* équivalent d'une border. La propriété outline est une propriété raccourcie qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi outline-style, outline-width et outline-color.*/
+}
+
+.c-hamburger span{
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background-color: white;
+}
+
+.c-hamburger span:before, .c-hamburger span:after{
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 8px;
+    background-color: white;
+    content: "";
+}
+
+.c-hamburger span:before{
+    top: -20px;
+}
+
+.c-hamburger span:after{
+    bottom: -20px;
+}
+
+.c-hamburger--htx{
+    background-color: #c02727;
+}
+
+.c-hamburger--htx span{
+    transition: background 0s 0.3s;
+}
+
+.c-hamburger--htx span:before, .c-hamburger--htx span:after{
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.c-hamburger--htx span:before{
+    transition-property: top, transform;
+}
+
+.c-hamburger--htx span:after{
+    transition-property: bottom, transform;
+}
+
+.c-hamburger--htx.is-active{
+    background-color: #a64452;
+    transform: translateX(135px);
+}
+
+.c-hamburger--htx.is-active span{
+    background: none;
+}
+
+.c-hamburger--htx.is-active span::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.c-hamburger--htx.is-active span::after{
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.c-hamburger--htx.is-active span::before, .c-hamburger--htx.is-active span::after{
+    transition-delay: 0s, 0.3s;
+}
